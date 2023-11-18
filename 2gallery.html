@@ -6,71 +6,56 @@
     <title>Gallery</title>
     <style>
         /* logos */
-        .logo, .icon {
-            width: 80px;
-        }
-
         #logo_link {
-            padding-top: 5px;
-            justify-self: center;
-            align-self: center;
-        }
+			position: absolute;
+			top: 10px; /* Adjusted the top position for the logo */
+			left: 20px; /* Adjusted the left position for the logo */
+			z-index: 2;
+			}
+			.logo{
+			width: 65%;
+			border-radius: 35%;
+			}
 
-        #hero-img {
-            width: 100%;
-}
-        }
 
-        #navbar a:hover::before {
-            content: ""; /* Empty content for pseudo-element */
-            width: 40px; /* Adjust the width as needed */
-            height: 40px; /* Adjust the height as needed */
-            background-color: #2196F3;
-            border-radius: 50%;
-            position: absolute;
-            left: -20px; /* Adjust the left position for the logo */
-            top: 50%; /* Center the logo vertically */
-            transform: translateY(-50%); /* Center the logo vertically */
-        }
 
-        /* Additional styles for your existing navigation */
+			/* Place the navbar at the bottom of the page */
+			.navbar {
+			width: 100%;
+			position: absolute;
+			justify-content: space-around;
+			z-index: 2;
+			}
 
-        nav {
-        background-color: #EDD382;
-        line-height: 3em;
-        text-align: center;
-        font-size: 1.2em;
-        justify-content: space-around;
-        }
-        nav  {
-        list-style-type: none;
-        display: flex;
+			/* Style the links inside the navigation bar */
+			.navbar a {
+			color: #3c7e86;
+			padding: 13px;
+			text-decoration: none;
+			font-size: 22px;
+			margin-left: 270px;
+			display: inline-block;
+			position: relative;
+			justify-content: space-around;
+			z-index: 1;
+			}
 
-        }
-        nav a {
-        padding:1em;
-        min-width: 120px;
-        text-decoration: none;
-        padding: 10px;
+			/* Add the following styles for the hover effect */
+			.navbar a:hover {
+			background-color: #3c7e86;
+			color: white;
+			transform: scale(1.2);
+			justify-content: space-around;
+			}
 
-        }
-        nav a:link, nav a:visited {
-        color: #cf7022;
-        }
-        nav a:hover {
-        color: white;
-        background-color: #3c7e86 ;
-        transform: scale(1.1); 
-        transition: background-color 0.2s, transform 0.2s;
-        }
         * {box-sizing: border-box;}
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-            gap: 20px; /* Adjust the gap between items as needed */
-            padding-top: 60px;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px; 
+            padding-top: 200px;
             align-items: center;
-            margin-left: 80px;
+            margin-left: 100px;
 
         }
         
@@ -211,12 +196,13 @@
     </a>
     <!-- Nav -->
     <nav>
-        <ul id="navbar">
-            <li><a href="index.html">Site Plan</a></li>
-            <li><a href="1home.html">Home</a></li>
-            <li><a href="2gallery.html">Gallery</a></li>
-            <li><a href="3contact.html">Contact</a></li>
-        </ul>
+        <div class="navbar">
+            <a href="index.html">Site Plan</a>
+            <a href="1home.html">Home</a>
+            <a href="2gallery.html">Gallery</a>
+            <a href="3contact.html">Contact</a>
+		</div>
+    </nav>
     </nav>
 </header>
 <body>

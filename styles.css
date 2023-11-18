@@ -123,9 +123,9 @@ nav a:link, nav a:visited {
 nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
-  transform: scale(1.1); 
+  transform: scale(1.2); 
   transition: background-color 0.2s, transform 0.2s;
-  color: #999;
+  color: var(--nav-hover-link-color);
 }
 
 .sitemap {

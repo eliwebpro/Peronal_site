@@ -1,188 +1,196 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-	/* logos */
-.logo, .icon {
-    width: 80px;
-}
-
-#logo_link {
-    padding-top: 5px;
-    justify-self: center;
-    align-self: center;
-}
-
-#hero-img {
-    width: 100%;
-}
-#navbar {
-  background-color: #333;
-  position: fixed;
-  top: -50px;
-  width: 100%;
-  display: block;
-  transition: top 0.3s;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 15px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-body, html {
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.bg-img {
-  /* The image used */
-  background-image: url("homepage1.jfif");
-  height: 100%;
-  min-height: 380px;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-/* Add styles to the form container */
-.container {
-  position: absolute;
-  right: 0;
-  margin: 20px;
-  max-width: 300px;
-  padding: 16px;
-  background-color: white;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit button */
-.btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
-input[type=text], select, textarea {
-	width: 100%;
-	padding: 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	margin-top: 6px;
-	margin-bottom: 16px;
-	resize: vertical;
-}
-
-input[type=submit] {
-	background-color: #04AA6D;
-	color: white;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-}
-input[type=submit]:hover {
-	background-color: #45a049;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Add the following styles for the logo to appear over the navigation bar on hover */
+        #logo_link {
+			position: absolute;
+			top: 10px; /* Adjusted the top position for the logo */
+			left: 10px; /* Adjusted the left position for the logo */
+			z-index: 2;
+			}
+			.logo{
+			width: 65%;
+			border-radius: 35%;
+			}
 
 
-.container {
-	border-radius: 5px;
-	background-color: #f2f2f2;
-	padding: 20px;
-}
-footer {
-background-color: #EDD382;
-color: black;
-padding: 25px 50px;
-margin-top: 200px;
-display: flex;
-justify-content: space-around;
-align-items: center;
+
+			/* Place the navbar at the bottom of the page */
+			.navbar {
+			width: 100%;
+			position: absolute;
+			justify-content: space-around;
+			z-index: 2;
+			}
+
+			/* Style the links inside the navigation bar */
+			.navbar a {
+			color: rgb(240, 240, 28);
+			padding: 13px;
+			text-decoration: none;
+			font-size: 22px;
+			margin-left: 270px;
+			display: inline-block;
+			position: relative;
+			justify-content: space-around;
+			z-index: 1;
+			}
+
+			/* Add the following styles for the hover effect */
+			.navbar a:hover {
+			background-color: #EDD382;
+			color: white;
+			transform: scale(1.2);
+			justify-content: space-around;
+			}
+
+        
+
+        
+        #hero-img {
+            width: 100%;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-img {
+            /* The image used */
+            background-image: url("hero.jpg");
+            height: 100%;
+            min-height: 380px;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: space;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Add styles to the form container */
+        .container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			max-width: 700px;
+			padding: 16px;
+			background-color: white;
 }
 
-/* padding to the images inside the .social section in the footer */
-footer .social img {
-padding-top: 15px;
-}
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background-color: white;
+        }
 
-footer a:hover {
-background-color: #3c7e86;
-transform: scale(2.2); 
-transition: background-color 0.3s, transform 0.3s;
-color: white; 
-}
-</style>
+        input[type=text]:focus, input[type=password]:focus {
+            background-color: white;
+            outline: none;
+        }
+
+        /* Set a style for the submit button */
+        .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+            border-radius: 10%;
+        }
+
+        .btn:hover {
+            opacity: 1;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        footer {
+			background-color: #EDD382;
+			color: black;
+			padding: 25px 50px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		/* padding to the images inside the .social section in the footer */
+		footer .social img {
+			padding-top: 15px;
+		}
+
+		footer a:hover {
+			background-color: #3c7e86;
+			transform: scale(2.2); 
+			transition: background-color 0.3s, transform 0.3s;
+			color: white; 
+		}
+    </style>
 </head>
+<body>
+
 <header>
-	<!-- Logo -->
+    <!-- Logo -->
     <a id="logo_link" href="1home.html">
         <img class="logo" src="logo_200x200.png" alt="EliFixRight">
     </a>
     <!-- Nav -->
     <nav>
-        <ul id="navbar">
-            <li><a href="index.html">Site Plan</a></li>
-            <li><a href="1home.html">Home</a></li>
-            <li><a href="2gallery.html">Gallery</a></li>
-            <li><a href="3contact.html">Contact</a></li>
-        </ul>
+        <div class="navbar">
+            <a href="index.html">Site Plan</a>
+            <a href="1home.html">Home</a>
+            <a href="2gallery.html">Gallery</a>
+		</div>
     </nav>
-	
 </header>
-<body>
 
-<h2>Form on Hero Image</h2>
 <div class="bg-img">
   <form action="/action_page.php" class="container">
-    <h1>Login</h1>
+    <h1>Contact us</h1>
 
     <label for="fname">Name</label>
     <input type="text" placeholder="Your name.." name="email" required>
 
-	<label for="phone">Phone</label>
+    <label for="phone">Phone</label>
     <input type="text" id="phone" placeholder="Your Phone..">
 
     <label for="subject">Subject</label>
@@ -192,23 +200,22 @@ color: white;
   </form>
 </div>
 
-<p>This example creates a form on a responsive image. Try to resize the browser window to see how it always will cover the whole width of the screen, and that it scales nicely on all screen sizes.</p>
-
-</body>
 <footer>
     <p>EliFixRight &copy; 2023 - Eliezio Silva</p>
+	<p><a href="1home.html">Home</a></p>
     <p><a href="2gallery.html">Gallery</a></p>
-    <p><a href="3contact.html">Contact Us</a></p>
+    
     <div class="social">
         <a href="https://facebook.com" target="_blank">
             <img src="icons8-facebook-48.png" alt="fb icon">
         </a>
-        <a href="3contact.html">
-            <img src="icons8-email-48.png" alt="Email">
+        <!-- <a href="3contact.html">
+            <img src="icons8-email-48.png" alt="Email"> -->
         </a>
         <a href="https://instagram.com" target="_blank">
             <img src="icons8-instagram-48.png" alt="instagram icon">
         </a>
     </div>
 </footer>
+</body>
 </html>
