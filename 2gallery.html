@@ -5,28 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <style>
-        #navbar {
-        background-color: #333;
-        position: fixed;
-        top: -50px;
-        width: 100%;
-        display: block;
-        transition: top 0.3s;
+        #logo_link {
+            display: flex;
+            align-items: center;
         }
 
-        #navbar a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
+        .logo {
+            width: 40px; /* Set the desired width for the logo */
+            height: 40px; /* Set the desired height for the logo */
+            border-radius: 50%; /* Make the logo rounded */
+        }
+
+        #navbar a:hover::before {
+            content: ""; /* Empty content for pseudo-element */
+            width: 40px; /* Adjust the width as needed */
+            height: 40px; /* Adjust the height as needed */
+            background-color: #2196F3;
+            border-radius: 50%;
+            position: absolute;
+            left: -20px; /* Adjust the left position for the logo */
+            top: 50%; /* Center the logo vertically */
+            transform: translateY(-50%); /* Center the logo vertically */
+        }
+
+        /* Additional styles for your existing navigation */
+
+        nav {
+        background-color: #EDD382;
+        line-height: 3em;
         text-align: center;
-        padding: 15px;
-        text-decoration: none;
-        font-size: 17px;
+        font-size: 1.2em;
+        justify-content: space-around;
         }
+        nav  {
+        list-style-type: none;
+        display: flex;
 
-        #navbar a:hover {
-        background-color: #ddd;
-        color: black;
+        }
+        nav a {
+        padding:1em;
+        min-width: 120px;
+        text-decoration: none;
+        padding: 10px;
+
+        }
+        nav a:link, nav a:visited {
+        color: #cf7022;
+        }
+        nav a:hover {
+        color: white;
+        background-color: #3c7e86 ;
+        transform: scale(1.1); 
+        transition: background-color 0.2s, transform 0.2s;
         }
         * {box-sizing: border-box;}
         .grid-container {
@@ -69,10 +99,10 @@
           border-radius: 50%;
         }
         footer {
-            background-color: hsl(40, 1%, 59%);
+            background-color: #EDD382;
             color: #472D30;
             padding: 25px 50px;
-            /* margin-top: 200px; */
+            margin-top: 200px;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -168,6 +198,10 @@
         </script>
         </head>
 <header>
+    <!-- Logo -->
+    <a id="logo_link" href="1home.html">
+        <img class="logo" src="logo_200x200.png" alt="EliFixRight">
+    </a>
     <!-- Nav -->
     <nav>
         <ul id="navbar">
