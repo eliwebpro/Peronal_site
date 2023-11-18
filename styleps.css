@@ -3946,7 +3946,7 @@
 		}
 footer {
 	background-color: #EDD382;
-	color: #472D30;
+	color: black;
 	padding: 25px 50px;
 	margin-top: 200px;
 	display: flex;
@@ -3960,6 +3960,8 @@ footer .social img {
 }
 
 footer a:hover {
-	transform: rotate(15deg);
-	background-color: white;
+	background-color: #3c7e86;
+	transform: scale(2.2); 
+    transition: background-color 0.3s, transform 0.3s;
+	color: white; 
 }
