@@ -113,17 +113,38 @@ img {vertical-align: middle;}
   from {opacity: .4} 
   to {opacity: 1}
 }
+footer {
+    background-color: hsl(40, 1%, 59%);
+    color: #472D30;
+    padding: 25px 50px;
+    /* margin-top: 200px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* padding to the images inside the .social section in the footer */
+footer .social img {
+    padding-top: 15px;
+}
+
+footer a:hover {
+    transform: rotate(15deg);
+    background-color: white;
+}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-    </style>
+
+</style>
 </head>
 <header>
     <!-- Nav -->
     <nav>
         <ul id="navbar">
+            <li><a href="index.html">Site Plan</a></li>
             <li><a href="page2.html">Home</a></li>
             <li><a href="page3.html">Gallery</a></li>
             <li><a href="page4.html">Contact</a></li>
