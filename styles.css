@@ -4,10 +4,10 @@ Fonts are separated by a | */
 @import url('https://fonts.googleapis.com/css2?family=Gluten&family=Playpen+Sans&family=Roboto:wght@300;400&family=Texturina:opsz,wght@12..72,800&display=swap');
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #cf7022   ;
+  --primary-color: #EDD382   ;
   --secondary-color: #3c7e86 ;
   --accent1-color: #5f5a41;
-  --accent2-color: #EDD382;
+  --accent2-color: #f16f60;
 
   /* change the values below to your chosen font(s) */
   --heading-font: roboto, arial, sans-serif;
@@ -16,7 +16,7 @@ Fonts are separated by a | */
   /* these colors below should be chosen from among your palette colors above */
   --headline-color-on-white: #5f5a41;  /* headlines on a white background */ 
   --headline-color-on-color: #EDD382; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #cf7022; /* paragraph text on a white background */ 
+  --paragraph-color-on-white: #3c7e86; /* paragraph text on a white background */ 
   --paragraph-color-on-color: #EDD382; /* paragraph text on a colored background */ 
   --paragraph-background-color: #3c7e86  ;
   --nav-link-color: #cf7022;
