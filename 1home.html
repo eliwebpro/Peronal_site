@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="styleps.css">
     <title>EliFixRight Home</title>
 </head>
@@ -23,15 +25,18 @@
 		</div>
     </nav>
     <!-- Banner -->
-    <section id="banner">
-        <div class="inner">
-            <h1>EliFixRight</h1>
-            <p>Your home, Our handwork</p>
+    <!-- Modificação no seu HTML -->
+<div id="banner">
+    <div class="inner">
+        <h1>EliFixRight</h1>
+        <p>Your home, Our handwork</p>
+        <div class="banner-content">
+            <a href="3contact.html" class="button big scrolly">Contact us</a>
         </div>
-    </section>
-</header>
+    </div>
+</div>
 
-<a href="page4.html" class="button big scrolly">Contact us</a>
+</header>
 
 <!-- Main -->
 <div id="main">
@@ -47,7 +52,7 @@
                     </div>
                 </div>
                 <div class="col col2">
-                    <h3>Purpose</h3>
+                    <h2>Purpose</h2>
                     <p>Our mission is to provide homeowners with top-notch handyman services that transform their houses into comfortable, functional, and aesthetically pleasing homes. We aim to be your trusted partner in all things related to home repairs and renovations.</p>
                 </div>
             </div>
@@ -59,10 +64,10 @@
         <div class="inner">
             <div class="flex flex-2">
                 <div class="col col2">
-                    <h3>Audience</h3>
+                    <h2>Audience</h2>
                     <p>Our target audience includes homeowners and property owners seeking reliable and skilled handyman services. Whether they need minor repairs, major renovations, or ongoing maintenance, our services are designed to cater to their specific needs, ensuring that their homes are safe, attractive, and well-maintained.</p>
                 </div>
-                <div class="col col1 first">
+                <div class="col col2">
                     <div class="image round fit">
                         <img src="homepage21.jfif" alt="" width="320" height="320">
                     </div>
@@ -73,26 +78,26 @@
 
     <!-- Section -->
     <section class="wrapper style1">
+        
         <div class="inner">
-            <header>
-                <h2>Links</h2>
-                <h2>Contact</h2>
-            </header>
-            <div class="flex flex-3">
-                <div class="col align-center">
-                    <div class="image round fit">
-                        <a href="2gallery.html"><img src="gallery.png" alt="" width="320" height="320"></a>
-                    </div>
-                    <p>Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet. </p>
-                    <a href="2gallery.html" class="button">Gallery</a>
+            
+            <div class="flex flex-2">
+                <div class="col col1">
+                    <a href="2gallery.html">
+                        <img src="gallery.png" alt="" width="320" height="320">
+                    </a>
+                    <p>Sed congue elit malesuada nibh, a varius odio vehicula aliquet.<br> Aliquam consequat, nunc quis sollicitudin aliquet. </p>
+                    <a href="2gallery.html" class="button small gallery-button">Gallery</a>
                 </div>
-                <div class="col align-center">
-                    <div class="image round fit">
-                        <a href="3contact.html"><img src="contact.png" alt="" width="320" height="320"></a>
-                    </div>
+                <div class="col col1">
+                    <a href="3contact.html">
+                        <img src="contact.png" alt="" width="320" height="320">
+                    </a>
                     <p>Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet. </p>
-                    <a href="3contact.html" class="button">Contact</a>
+                    <a href="3contact.html" class="button small contact-button">Contact Us</a>
                 </div>
+            </div>
+            
             </div>
         </div>
     </section>
@@ -123,6 +128,13 @@
 <script src="js/skel.min.js"></script>
 <script src="js/util.js"></script>
 <script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#banner').addClass('is-loaded');
+  });
+</script>
+
 
 
 </body>
