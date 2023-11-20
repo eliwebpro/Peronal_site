@@ -3,48 +3,66 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        /* Add the following styles for the logo to appear over the navigation bar on hover */
+		 /* Fonts */
+		 @import url('https://fonts.googleapis.com/css2?family=Gluten&family=Playpen+Sans&family=Roboto:wght@300;400&family=Texturina:opsz,wght@12..72,800&display=swap');
+
+		* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		}
+
+		/* General Styles */
+		body, html {
+		height: 100%;
+		font-family: 'Roboto', sans-serif;
+		background-color: rgb(248, 248, 248);
+		}
+
+		* {
+		box-sizing: border-box;
+		}
+
+
+        /* Logo and Navbar Styles */
         #logo_link {
-			position: absolute;
-			top: 10px; /* Adjusted the top position for the logo */
-			left: 10px; /* Adjusted the left position for the logo */
-			z-index: 2;
-			}
-			.logo{
-			width: 65%;
-			border-radius: 35%;
-			}
+            position: absolute;
+            top: 2%;
+            left: 1%;
+            z-index: 2;
+        }
 
+        .logo {
+            width: 65%;
+            border-radius: 35%;
+        }
+        .navbar {
+            width: 100%;
+            position: absolute;
+            justify-content: space-around;
+            z-index: 2;
+        }
 
+        .navbar a {
+            color: #f5f113;
+            padding: 13px;
+            text-decoration: none;
+            font-size: 25px;
+            margin-left: 270px;
+            display: inline-block;
+            position: relative;
+            justify-content: space-around;
+            z-index: 1;
+            text-shadow: 4px 4px 8px black;
+        }
 
-			/* Place the navbar at the bottom of the page */
-			.navbar {
-			width: 100%;
-			position: absolute;
-			justify-content: space-around;
-			z-index: 2;
-			}
-
-			/* Style the links inside the navigation bar */
-			.navbar a {
-			color: rgb(240, 240, 28);
-			padding: 13px;
-			text-decoration: none;
-			font-size: 22px;
-			margin-left: 270px;
-			display: inline-block;
-			position: relative;
-			justify-content: space-around;
-			z-index: 1;
-			}
-
-			/* Add the following styles for the hover effect */
-			.navbar a:hover {
-			background-color: #EDD382;
-			color: white;
-			transform: scale(1.2);
-			justify-content: space-around;
-			}
+        .navbar a:hover {
+            background-color: #EDD382;
+            color: white;
+            transform: scale(1.2);
+            justify-content: space-around;
+            
+        }
 
         
 
@@ -75,7 +93,7 @@
         /* Add styles to the form container */
         .container {
 			position: absolute;
-			top: 50%;
+			top: 55%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			max-width: 700px;
@@ -84,7 +102,7 @@
 }
 
         /* Full-width input fields */
-        input[type=text], input[type=password] {
+        input[type=text], input[type=tel], input[type=email] {
             width: 100%;
             padding: 15px;
             margin: 5px 0 22px 0;
@@ -92,7 +110,7 @@
             background-color: white;
         }
 
-        input[type=text]:focus, input[type=password]:focus {
+        input[type=text]:focus,input[type=email]:focus, input[type=tel]:focus {
             background-color: white;
             outline: none;
         }
@@ -105,11 +123,16 @@
             cursor: pointer;
             width: 100%;
             opacity: 0.9;
-            border-radius: 10%;
+            border-radius: 15%;
+			font-size: 22px;
+			font-weight: bold;
+			border: 3px solid black;
         }
-
+		
         .btn:hover {
-            opacity: 1;
+            opacity: 2;
+			transform: scale(1);
+
         }
 
         input[type=text], select, textarea {
@@ -142,26 +165,38 @@
             padding: 20px;
         }
 
-        footer {
-			background-color: #EDD382;
-			color: black;
-			padding: 25px 50px;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-		}
+       /* Footer Styles */
+	   footer {
+            background-color: #EDD382;
+            color: black;
+            padding: 5px 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
 
-		/* padding to the images inside the .social section in the footer */
-		footer .social img {
-			padding-top: 15px;
-		}
+        footer a:hover {
+            transform: scale(1.1);
+            transition: background-color 0.3s, transform 0.3s;
+            color: rgb(10, 10, 10);
+            padding: 16px;
+            text-decoration: none;
+        }
 
-		footer a:hover {
-			background-color: #3c7e86;
-			transform: scale(2.2); 
-			transition: background-color 0.3s, transform 0.3s;
-			color: white; 
+        p {
+            font-size: 21px;
+            font-family: texturina;
+        }
+
+        footer a {
+            text-decoration: none;
+            font-size: 21px;
+            font-family: 'texturina', sans-serif;
+        }
+		.social img{
+			padding-left: 30px;
 		}
+        
     </style>
 </head>
 <body>
@@ -182,20 +217,24 @@
 </header>
 
 <div class="bg-img">
-  <form action="/action_page.php" class="container">
+<div id="feedback"></div>
+<form action="/action_page.php" class="container">
     <h1>Contact us</h1>
 
     <label for="fname">Name</label>
-    <input type="text" placeholder="Your name.." name="email" required>
+    <input type="text" placeholder="Your name.." name="name" required>
 
     <label for="phone">Phone</label>
-    <input type="text" id="phone" placeholder="Your Phone..">
+	<input type="tel" id="phone" placeholder="Your Phone.." name="phone"  required>
+	
+	<label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
 
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
     <button type="submit" class="btn">send</button>
-  </form>
+</form>
 </div>
 
 <footer>
@@ -215,5 +254,33 @@
         </a>
     </div>
 </footer>
+<script>
+    // get the feedback div element so we can do something with it.
+const feedbackElement = document.getElementById('feedback');
+// get the form so we can read what was entered in it.
+const formElement = document.forms[0];
+// add a 'listener' to wait for a submission of our form. When that happens run the code below.
+formElement.addEventListener('submit', function(e) {
+    // stop the form from doing the default action.
+    e.preventDefault();
+    // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+    feedbackElement.innerHTML = 'Hello ' + formElement.name.value + '! Thank you for your message. We will get back with you as soon as possible!';
+    // make the feedback element visible.
+    feedbackElement.style.display = "block";
+    // add a class to move everything down so our message doesn't cover it.
+    document.body.classList.add('moveDown');
+    
+    // Exibir a caixa de diálogo com a mensagem
+    if (confirm(feedbackElement.innerHTML)) {
+        // Resetar o formulário se o usuário clicar em "OK"
+        formElement.reset();
+        // Ocultar a mensagem
+        feedbackElement.style.display = "none";
+        // Remover a classe que move a página para baixo
+        document.body.classList.remove('moveDown');
+    }
+});
+
+</script>
 </body>
 </html>
